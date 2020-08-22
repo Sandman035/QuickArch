@@ -13,4 +13,5 @@ There might be some bugs or other problems. Please fell free to let me know how 
 3. Have the keyboard layout as you wish.
 4. Have an internet conection.
 5. Install wget with pacman -Sy wget
-6. Type wget https://raw.githubusercontent.com/Sandman035/QuickArch/master/
+6. Type 'wget https://raw.githubusercontent.com/Sandman035/QuickArch/master/QuickArchInstall.sh'
+7. Type 'sh QuickArchInstall.sh' to start the install
