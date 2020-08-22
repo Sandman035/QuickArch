@@ -6,7 +6,7 @@ This code may not suit your needs or your computer so look over it before use.
 
 PLEASE TRY THIS CODE ON A VIRTUAL MACHINE BEFORE USING IT ON YOUR COMPUTER!!!
 
-There might be some bugs or other problems. Please fell free to let me know how to fix these problems and fell free to make personalise this as you please.
+There might be some bugs or other problems. Please fell free to let me know how to fix these problems and fell free to personalise this as you please.
 
 # Instructions:
 
