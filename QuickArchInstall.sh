@@ -36,7 +36,7 @@ pacman -S nano --noconfirm
 nano /etc/pacman.d/mirrorlist
 
 #refresh mirrors
-pacman -Syyu --noconfirm
+pacman -Syyy --noconfirm
 
 echo "------------------------------------------------"
 echo "--               Partitioning                 --"
