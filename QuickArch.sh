@@ -180,7 +180,16 @@ passwd
 
 #install grub
 pacman -S grub-bios --noconfirm --needed
-grub-install ${DISK}
+
+if [ ${YESNOEFI} == "yes" ]
+then
+    grub-install --target=x86_64-efi --efi-directory=esp --bootloader-id=GRUB
+fi
+
+if [ ${YESNOEFI} == "no"
+then
+    grub-install ${DISK}
+fi
 
 #create a new initramfs
 mkinitcpio -P
