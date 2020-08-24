@@ -14,4 +14,4 @@ There might be some bugs or other problems. Please fell free to let me about the
 2. Boot into the arch installer.
 3. Have the keyboard layout as you wish.
 4. Have an internet conection.
-5. to star the install write 'curl https://raw.githubusercontent.com/Sandman035/QuickArch/master/QuickArch.sh | sh'
+5. to star the install write 'curl https://raw.githubusercontent.com/Sandman035/QuickArch/master/QuickArch.sh | sh' or install wget 'pacman -Sy wget' then type 'wget https://raw.githubusercontent.com/Sandman035/QuickArch/master/QuickArch.sh' lastly to start install type 'sh QuickArch.sh'.
