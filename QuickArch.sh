@@ -150,7 +150,7 @@ echo "------------------------------------------------"
 genfstab -U /mnt >> /mnt/etc/fstab
 
 #change root into the new system
-arch-chroot /mnt /bin/bash << EOT
+arch-chroot /mnt
 
 #ask for time zone
 echo "Please enter time zone: (example Canada)"
@@ -201,8 +201,6 @@ grub-mkconfig -o /boot/grub/grub.cfg
 
 #exit out of chroot
 exit
-
-EOT
 
 echo "------------------------------------------------"
 echo "--            You may now reboot              --"
