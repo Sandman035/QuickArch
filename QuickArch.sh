@@ -150,10 +150,7 @@ echo "------------------------------------------------"
 genfstab -U /mnt >> /mnt/etc/fstab
 
 #change root into the new system
-arch-chroot /mnt echo "this worked"
-
-#list time zones
-timedatectl list-timezones
+arch-chroot /mnt 
 
 #ask for time zone
 echo "Please enter time zone: (example Canada)"
