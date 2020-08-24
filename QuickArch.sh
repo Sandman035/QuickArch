@@ -150,23 +150,23 @@ echo "------------------------------------------------"
 genfstab -U /mnt >> /mnt/etc/fstab
 
 #change root into the new system
-arch-chroot /mnt /bin/bash -c 'echo "Please enter time zone: (example Canada)"; read ZONE; echo "${ZONE}"'
+arch-chroot /mnt /bin/bash -c 'echo "Please enter time zone: (example Canada)"; read ZONE; timedatectl set-timezone ${Zone}/${SubZone}; ln -sf /usr/share/zoneinfo/${ZONE}/${SUBZONE} /etc/localtime; echo "-- pick locale --"; nano /etc/locale.gen'
 
 #ask for time zone
-echo "Please enter time zone: (example Canada)"
-read ZONE
+#echo "Please enter time zone: (example Canada)"
+#read ZONE
 
-echo "Please enter time subzone: (example Eastern)"
-read SUBZONE
+#echo "Please enter time subzone: (example Eastern)"
+#read SUBZONE
 
 #set the time zone
-timedatectl set-timezone ${Zone}/${SubZone}
-ln -sf /usr/share/zoneinfo/${ZONE}/${SUBZONE} /etc/localtime
+#timedatectl set-timezone ${Zone}/${SubZone}
+#ln -sf /usr/share/zoneinfo/${ZONE}/${SUBZONE} /etc/localtime
 
-echo "-- pick locale --"
+#echo "-- pick locale --"
 
 #edit /etc/locale.gen
-nano /etc/locale.gen
+#nano /etc/locale.gen
 
 #generate locales
 locale-gen
