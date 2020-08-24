@@ -26,11 +26,11 @@ echo "-------------------------------------------------"
 echo "--   Update the system clock and pick mirrors  --"
 echo "-------------------------------------------------"
 
+#install nano
+pacman -Sy nano --noconfirm
+
 #update sytem clock
 timedatectl set-ntp true
-
-#install nano
-pacman -S nano --noconfirm
 
 #open the mirrorlist to pick mirrors
 nano /etc/pacman.d/mirrorlist
