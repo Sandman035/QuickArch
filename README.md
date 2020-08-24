@@ -1,6 +1,6 @@
 # QuickArch
 
-This project was made to make arch install faster for those who want to have a fast install. This project used the arch wiki for the instalation process.
+This project is a fast arch installer with partitioning included. This project used the arch wiki for the instalation process.
 
 This code may not suit your needs or your computer so look over it before use.
 
