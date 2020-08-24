@@ -86,12 +86,8 @@ then
 
     #mount home partition
     mount ${HOME} /mnt/home
-
-fi
-
-if [ ${YNHOME} == "no" ]
-then
-    #ask for a new home partition if you didn't have an existing one
+else
+   #ask for a new home partition if you didn't have an existing one
     echo "Did you make a new Home partition: (yes, no)"
     read YESNOHOME
 
@@ -108,8 +104,8 @@ then
         mount ${NEWHOME} /mnt/home
 
     fi
-
 fi
+
 
 #ask if you have made an efi partition
 echo "Did you make an efi partition: (yes, no)"
