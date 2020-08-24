@@ -150,7 +150,7 @@ echo "------------------------------------------------"
 genfstab -U /mnt >> /mnt/etc/fstab
 
 #change root into the new system
-arch-chroot /mnt /bin/bash -c 'echo "Please enter time zone: (example Canada)"; read ZONE; echo "Please enter time subzone: (example Eastern)"; read SUBZONE; timedatectl set-timezone ${Zone}/${SubZone}; ln -sf /usr/share/zoneinfo/${ZONE}/${SUBZONE} /etc/localtime; echo "-- pick locale --"; nano /etc/locale.gen'
+arch-chroot /mnt /bin/bash -c 'echo "Please enter time zone: (example Canada)"; read ZONE; echo "Please enter time subzone: (example Eastern)"; read SUBZONE; timedatectl set-timezone ${Zone}/${SubZone}; ln -sf /usr/share/zoneinfo/${ZONE}/${SUBZONE} /etc/localtime; echo "-- pick locale --"; nano /etc/locale.gen; locale-gen; echo "Please enter hostname:"; read HOSTNAME; echo ${HOSTNAME} > /etc/hostname'
 
 #ask for time zone
 #echo "Please enter time zone: (example Canada)"
@@ -169,12 +169,12 @@ arch-chroot /mnt /bin/bash -c 'echo "Please enter time zone: (example Canada)"; 
 #nano /etc/locale.gen
 
 #generate locales
-locale-gen
+#locale-gen
 
 #generate hostname
-echo "Please enter hostname:"
-read HOSTNAME
-echo ${HOSTNAME} > /etc/hostname
+#echo "Please enter hostname:"
+#read HOSTNAME
+#echo ${HOSTNAME} > /etc/hostname
 
 #install network manager
 pacman -S network-manager dhclient --noconfirm --needed
