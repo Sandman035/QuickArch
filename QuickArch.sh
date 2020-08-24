@@ -13,14 +13,6 @@ echo "-------------------------------------------------"
 echo "                                                 "
 echo "                                                 "
 
-#ask if you want to continue with install
-echo "Would you like to continue with the install: (yes,no)"
-read INSTALL
-if [ ${INSTALL} == "no" ]
-then
-    exit
-fi
-
 echo "                                                 "
 echo "-------------------------------------------------"
 echo "--   Update the system clock and pick mirrors  --"
