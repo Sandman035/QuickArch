@@ -24,6 +24,8 @@ pacman -Sy nano --noconfirm
 #update sytem clock
 timedatectl set-ntp true
 
+echo "--            pick your mirrors                --"
+
 #open the mirrorlist to pick mirrors
 nano /etc/pacman.d/mirrorlist
 
@@ -163,6 +165,8 @@ read SUBZONE
 timedatectl set-timezone ${Zone}/${SubZone}
 ln -sf /usr/share/zoneinfo/${ZONE}/${SUBZONE} /etc/localtime
 
+echo "-- pick locale --"
+
 #edit /etc/locale.gen
 nano /etc/locale.gen
 
@@ -187,10 +191,7 @@ pacman -S grub-bios --noconfirm --needed
 if [ ${YESNOEFI} == "yes" ]
 then
     grub-install --target=x86_64-efi --efi-directory=esp --bootloader-id=GRUB
-fi
-
-if [ ${YESNOEFI} == "no" ]
-then
+else
     grub-install ${DISK}
 fi
 
