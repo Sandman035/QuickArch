@@ -1,3 +1,4 @@
+#!/bin/sh
 echo "-------------------------------------------------"
 echo "               -- Quick Arch --                  "
 echo "         --A fast way to install Arch--          "
@@ -190,7 +191,7 @@ pacman -S grub-bios --noconfirm --needed
 
 if [ ${YESNOEFI} == "yes" ]
 then
-    grub-install --target=x86_64-efi --efi-directory=esp --bootloader-id=GRUB
+    grub-install --target=x86_64-efi --efi-directory=/mnt/efi --bootloader-id=GRUB
 else
     grub-install ${DISK}
 fi
