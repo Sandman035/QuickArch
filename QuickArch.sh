@@ -16,15 +16,17 @@ echo "                                                 "
 #ask if you want to continue with install
 echo "Would you like to continue with the install: (yes,no)"
 read INSTALL
-if [${INSTALL} == no]
+if [ ${INSTALL} == "no" ]
 then
-    reboot
+    exit
 fi
 
 echo "                                                 "
 echo "-------------------------------------------------"
 echo "--   Update the system clock and pick mirrors  --"
 echo "-------------------------------------------------"
+
+pacman -Syu
 
 #install nano
 pacman -Sy nano --noconfirm
@@ -36,7 +38,7 @@ timedatectl set-ntp true
 nano /etc/pacman.d/mirrorlist
 
 #refresh mirrors
-pacman -Syyy --noconfirm
+pacman -Sy --noconfirm
 
 echo "------------------------------------------------"
 echo "--               Partitioning                 --"
