@@ -193,9 +193,6 @@ else
     grub-install ${DISK}
 fi
 
-#create a new initramfs
-mkinitcpio -P
-
 #create grub config file
 grub-mkconfig -o /boot/grub/grub.cfg
 
