@@ -1,4 +1,5 @@
 #!/bin/sh
+
 echo "-------------------------------------------------"
 echo "               -- Quick Arch --                  "
 echo "         --A fast way to install Arch--          "
