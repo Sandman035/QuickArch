@@ -150,7 +150,7 @@ echo "------------------------------------------------"
 genfstab -U /mnt >> /mnt/etc/fstab
 
 #change root into the new system
-arch-chroot /mnt /bin/bash -c 'echo "Please enter time zone: (example Canada)"; read ZONE; echo "Please enter time subzone: (example Eastern)"; read SUBZONE; timedatectl set-timezone ${Zone}/${SubZone}; ln -sf /usr/share/zoneinfo/${ZONE}/${SUBZONE} /etc/localtime; echo "-- pick locale --"; nano /etc/locale.gen; locale-gen; echo "Please enter hostname:"; read HOSTNAME; echo ${HOSTNAME} > /etc/hostname'
+arch-chroot /mnt /bin/bash -c 'echo "Please enter time zone: (example Canada)"; read ZONE; echo "Please enter time subzone: (example Eastern)"; read SUBZONE; timedatectl set-timezone ${Zone}/${SubZone}; ln -sf /usr/share/zoneinfo/${ZONE}/${SUBZONE} /etc/localtime; echo "-- pick locale --"; nano /etc/locale.gen; locale-gen; echo "Please enter hostname:"; read HOSTNAME; echo ${HOSTNAME} > /etc/hostname; pacman -S networkmanager dhclient --noconfirm --needed; systemctl enable NetworkManager.service; passwd; pacman -S grub-bios --noconfirm --needed'
 
 #ask for time zone
 #echo "Please enter time zone: (example Canada)"
@@ -177,14 +177,14 @@ arch-chroot /mnt /bin/bash -c 'echo "Please enter time zone: (example Canada)"; 
 #echo ${HOSTNAME} > /etc/hostname
 
 #install network manager
-pacman -S network-manager dhclient --noconfirm --needed
-systemctl enable --now NetworkManager
+#pacman -S networkmanager dhclient --noconfirm --needed
+#systemctl enable NetworkManager.service
 
 #set the root password
-passwd
+#passwd
 
 #install grub
-pacman -S grub-bios --noconfirm --needed
+#pacman -S grub-bios --noconfirm --needed
 
 if [ ${YESNOEFI} == "yes" ]
 then
