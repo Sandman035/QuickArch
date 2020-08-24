@@ -33,8 +33,7 @@ pacman -Sy --noconfirm
 echo "------------------------------------------------"
 echo "--               Partitioning                 --"
 echo "------------------------------------------------"
-echo "--       Warning all data will be lost!       --"
-ehco "------------------------------------------------"
+
 
 #show list of disks
 lsblk
@@ -52,6 +51,10 @@ cfdisk ${DISK}
 #select root partition
 echo "Please enter root partition: (example /dev/sda1)"
 read ROOT
+
+echo "------------------------------------------------"
+echo "--       Warning all data will be lost!       --"
+ehco "------------------------------------------------"
 
 #format root partition
 mkfs.ext4 ${ROOT}
@@ -116,6 +119,10 @@ then
     #ask for efi partition
     echo "Please enter the efi partition: (example /dev/sda1)"
     read EFI
+    
+    echo "------------------------------------------------"
+    echo "--       Warning all data will be lost!       --"
+    ehco "------------------------------------------------"
 
     #format efi partition
     mkfs.fat32 ${EFI}
