@@ -18,8 +18,6 @@ echo "-------------------------------------------------"
 echo "--   Update the system clock and pick mirrors  --"
 echo "-------------------------------------------------"
 
-pacman -Syu
-
 #install nano
 pacman -Sy nano --noconfirm
 
