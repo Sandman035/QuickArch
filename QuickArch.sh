@@ -35,6 +35,8 @@ pacman -Sy --noconfirm
 echo "------------------------------------------------"
 echo "--               Partitioning                 --"
 echo "------------------------------------------------"
+echo "--       Warning all data will be lost!       --"
+ehco "------------------------------------------------"
 
 #show list of disks
 lsblk
@@ -186,7 +188,7 @@ then
     grub-install --target=x86_64-efi --efi-directory=esp --bootloader-id=GRUB
 fi
 
-if [ ${YESNOEFI} == "no"
+if [ ${YESNOEFI} == "no" ]
 then
     grub-install ${DISK}
 fi
