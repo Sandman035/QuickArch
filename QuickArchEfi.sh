@@ -1,3 +1,47 @@
+#!/bin/sh
+echo "-------------------------------------------------"
+echo "             -- Quick Arch EFI --                "
+echo "         --A fast way to install Arch--          "
+echo "   --For more information go to the Arch wiki--  "
+echo "-------------------------------------------------"
+echo "                                                 "
+echo "-------------------------------------------------"
+echo "|               -- WARNINGS! --                 |"
+echo "|  This code may not suite your needs, so make  |"
+echo "|   your own versions of it! You need a basic   |"
+echo "|     understanding of how to install arch.     |"
+echo "-------------------------------------------------"
+echo "                                                 "
+echo "                                                 "
+
+echo "                                                 "
+echo "-------------------------------------------------"
+echo "--   Update the system clock and pick mirrors  --"
+echo "-------------------------------------------------"
+
+#install nano
+pacman -Sy nano --noconfirm
+
+#update sytem clock
+timedatectl set-ntp true
+
+echo "--            pick your mirrors                --"
+
+#open the mirrorlist to pick mirrors
+nano /etc/pacman.d/mirrorlist
+
+#refresh mirrors
+pacman -Sy --noconfirm
+
+echo "------------------------------------------------"
+echo "--               Partitioning                 --"
+echo "------------------------------------------------"
+
+
+#show list of disks
+lsblk
+
+#ask for disk name
 echo "Please enter disk: (example /dev/sda)"
 read DISK
 
