@@ -15,4 +15,5 @@ There might be some bugs or other problems. Please fell free to let me about the
 3. Have the keyboard layout as you wish.
 4. Know your time zone in advance this can be done by typing 'timedatectl list-timezones'.
 5. Have an internet conection.
-6. to star the install write 'curl https://raw.githubusercontent.com/Sandman035/QuickArch/master/QuickArch.sh | sh' or install wget 'pacman -Sy wget' then type 'wget https://raw.githubusercontent.com/Sandman035/QuickArch/master/QuickArch.sh' lastly to start install type 'sh QuickArch.sh'.
+6. If you have an EFI system skip this step. To star the install write 'curl https://raw.githubusercontent.com/Sandman035/QuickArch/master/QuickArch.sh | sh' or install wget 'pacman -Sy wget' then type 'wget https://raw.githubusercontent.com/Sandman035/QuickArch/master/QuickArch.sh' lastly to start install type 'sh QuickArch.sh'.
+7. For EFI systems only to start install write 'curl https://raw.githubusercontent.com/Sandman035/QuickArch/master/QuickArchEFI.sh | sh' or install wget 'pacman -Sy wget' then type 'wget https://raw.githubusercontent.com/Sandman035/QuickArch/master/QuickArchEFI.sh' lastly to start install type 'sh QuickArchEFI.sh'.
