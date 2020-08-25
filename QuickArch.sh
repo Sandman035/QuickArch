@@ -150,7 +150,7 @@ echo "------------------------------------------------"
 genfstab -U /mnt >> /mnt/etc/fstab
 
 #change root into the new system
-arch-chroot /mnt /bin/bash -c 'echo "Please enter time zone: (example Canada)"; read ZONE; echo "Please enter time subzone: (example Eastern)"; read SUBZONE; timedatectl set-timezone ${Zone}/${SubZone}; ln -sf /usr/share/zoneinfo/${ZONE}/${SUBZONE} /etc/localtime; echo "-- pick locale --"; nano /etc/locale.gen; locale-gen; echo "Please enter hostname:"; read HOSTNAME; echo ${HOSTNAME} > /etc/hostname; pacman -S networkmanager dhclient --noconfirm --needed; systemctl enable NetworkManager.service; passwd; pacman -S grub-bios --noconfirm --needed; if [ ${YESNOEFI} == "yes" ]; then; grub-install --target=x86_64-efi --efi-directory=/mnt/efi --bootloader-id=GRUB; else; grub-install ${DISK}; fi; grub-mkconfig -o /boot/grub/grub.cfg'
+arch-chroot /mnt /bin/bash -c 'echo "Please enter time zone: (example Canada)"; read ZONE; echo "Please enter time subzone: (example Eastern)"; read SUBZONE; timedatectl set-timezone ${Zone}/${SubZone}; ln -sf /usr/share/zoneinfo/${ZONE}/${SUBZONE} /etc/localtime; echo "-- pick locale --"; nano /etc/locale.gen; locale-gen; echo "Please enter hostname:"; read HOSTNAME; echo ${HOSTNAME} > /etc/hostname; pacman -S networkmanager dhclient --noconfirm --needed; systemctl enable NetworkManager.service; passwd'
 
 ##ask for time zone
 #echo "Please enter time zone: (example Canada)"
@@ -183,18 +183,18 @@ arch-chroot /mnt /bin/bash -c 'echo "Please enter time zone: (example Canada)"; 
 ##set the root password
 #passwd
 
-##install grub
-#pacman -S grub-bios --noconfirm --needed
+#install grub
+pacman -S grub-bios --noconfirm --needed
 
-#if [ ${YESNOEFI} == "yes" ]
-#then
-    #grub-install --target=x86_64-efi --efi-directory=/mnt/efi --bootloader-id=GRUB
-#else
-    #grub-install ${DISK}
-#fi
+if [ ${YESNOEFI} == "yes" ]
+then
+    grub-install --target=x86_64-efi --efi-directory=/mnt/efi --bootloader-id=GRUB
+else
+    grub-install ${DISK}
+fi
 
-##create grub config file
-#grub-mkconfig -o /boot/grub/grub.cfg
+#create grub config file
+grub-mkconfig -o /boot/grub/grub.cfg
 
 echo "------------------------------------------------"
 echo "--            You may now reboot              --"
