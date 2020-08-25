@@ -21,6 +21,16 @@ mkfs.ext4 ${ROOT}
 #mount root partition
 mount ${ROOT} /mnt
 
+#select EFI partition
+echo "Please enter EFI partition: (example /dev/sda1)"
+read EFI
+
+#format EFI partition
+mkfs.fat -F32 ${EFI}
+
+#mount EFI partition
+mount ${EFI} /mnt/efi
+
 #ask if you made a swap partition
 echo "Do you have a swap partition: (yes,no)"
 read YESNO
