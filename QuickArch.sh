@@ -49,7 +49,7 @@ read DISK
 echo "--          Partition your hardrive           --"
 
 #open cfdisk
-gdisk ${DISK}
+cfdisk ${DISK}
 
 #select root partition
 echo "Please enter root partition: (example /dev/sda1)"
