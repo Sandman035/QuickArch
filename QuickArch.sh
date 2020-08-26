@@ -117,7 +117,12 @@ echo "--         Arch Install on Main Drive         --"
 echo "------------------------------------------------"
 
 #install arch with some other packages
-pacstrap /mnt base base-devel linux linux-firmware nano sudo --noconfirm --needed
+pacstrap /mnt base base-devel linux linux-firmware nano sudo git --noconfirm --needed
+
+#install yay
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
 
 echo "------------------------------------------------"
 echo "--           Configure the system             --"
