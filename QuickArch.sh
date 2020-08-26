@@ -91,6 +91,7 @@ then
     read HOME
 
     #mount home partition
+    mkdir /mnt/home
     mount ${HOME} /mnt/home
 else
    #ask for a new home partition if you didn't have an existing one
