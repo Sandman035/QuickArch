@@ -33,6 +33,17 @@ echo "                                                 "
 
 pacman -Sy
 
+echo "--              Create a user                 --"
+
+echo "%wheel ALL=(ALL) ALL" >> /etc/sudoers
+
+#set up a user
+echo "Please enter username:"
+read USERNAME
+
+useradd -G wheel -m ${USERNAME}
+passwd ${USERNAME}
+
 echo "--        Descktop Environment Install         --"
 echo "                                                 "
 
