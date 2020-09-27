@@ -80,4 +80,4 @@ echo "3 : Yakuake         6 : Deepin Terminal      9 : GNOME Terminal   12 : Gua
 echo "4 : MATE terminal   8 : Pantheon Terminal   12 : sakura           16 : Terminator     20 : Termite"
 echo "5 : Tilda          10 : Tilix               15 : Xfce Termianl    20 : KMSCON         25 : None"
 
-read WM
+read TERMINAL
