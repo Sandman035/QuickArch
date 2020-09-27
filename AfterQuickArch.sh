@@ -38,4 +38,4 @@ echo "Please Enter the number which coresponds with the desktop environment you 
 echo "1 : Gnome     4 : Cinnamon       7 : LXDE     10 : Sugar   13 : None"
 echo "2 : KDE       5 : Deepin         8 : LXQt     11 : UKUI"
 echo "3 : Budgie    6 : Enlightenment  9 : MATE     12 : Xfce"
-read ${DE}
+read DE
