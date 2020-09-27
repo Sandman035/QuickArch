@@ -1,6 +1,11 @@
 #!/bin/sh
 echo "-------------------------------------------------"
-echo "             -- Quick Arch EFI --                "
+echo "      _____     _     _   _____         _        "
+echo "     |     |_ _|_|___| |_|  _  |___ ___| |_      "
+echo "     |  |  | | | |  _| '_|     |  _|  _|   |     "
+echo "     |__  _|___|_|___|_,_|__|__|_| |___|_|_|     "
+echo "        |__|                                     "
+echo "                                                 "
 echo "         --A fast way to install Arch--          "
 echo "   --For more information go to the Arch wiki--  "
 echo "-------------------------------------------------"
