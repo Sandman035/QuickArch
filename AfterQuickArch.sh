@@ -36,6 +36,7 @@ pacman -Sy
 echo "--        Descktop Environment Install         --"
 echo "                                                 "
 
+#ask for the Desktop Environment which the user will want to install
 echo "Please Enter the number which coresponds with the desktop environment you wish to install:"
 echo "1 : Gnome     4 : Cinnamon       7 : LXDE     10 : Sugar   13 : None"
 echo "2 : KDE       5 : Deepin         8 : LXQt     11 : UKUI"
