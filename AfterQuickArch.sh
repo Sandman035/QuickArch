@@ -73,7 +73,7 @@ echo "--         Terminal Emulator Install           --"
 echo "                                                 "
 
 #ask for the Terminal Emulator which the user will want to install
-echo "Please Enter the number which coresponds with the window manager you wish to install:"
+echo "Please Enter the number which coresponds with the terminal emulator you wish to install:"
 echo "1 : Alacritty       3 : Konsole              5 : kitty             7 : Liri Terminal   9 : moserial"
 echo "2 : PuTTY           4 : Qterminal            6 : Terminology       8 : urxvt          10 : xterm"
 echo "3 : Yakuake         6 : Deepin Terminal      9 : GNOME Terminal   12 : Guake          15 : LXTerminal"
@@ -81,3 +81,19 @@ echo "4 : MATE terminal   8 : Pantheon Terminal   12 : sakura           16 : Ter
 echo "5 : Tilda          10 : Tilix               15 : Xfce Termianl    20 : KMSCON         25 : None"
 
 read TERMINAL
+
+echo "--             Text Editor Install             --"
+echo "                                                 "
+
+#ask for the Text editor which the user will want to install
+echo "Please Enter the number which coresponds with the text editor you wish to install:"
+echo "1 : e3        9 : JOE                    17 : mcedit            25 : nano             33 : Acme"
+echo "2 : Adie     10 : Atom                   18 : Beaver            26 : Deepin Editor    34 : FeatherPad"
+echo "3 : gedit    11 : Gobby                  19 : Howl              27 : jEdit            35 : Kate"
+echo "4 : Kwrite   12 : L3afpad                20 : leafpad           28 : Liri Text        36 : Mousepad"
+echo "5 : NEdit    13 : Notepadqq              21 : Pantheon Code     29 : Pluma            37 : Sam"
+echo "6 : SciTE    14 : Visual Studio Code     22 : xed               30 : XEdit            38 : Emacs"
+echo "7 : mg       15 : Zile                   23 : Kakoune           31 : Neovim           39 : None"
+echo "8 : vi       16 : vim                    24 : Vis               32 : Neovim-Qt"
+
+read TEXT
