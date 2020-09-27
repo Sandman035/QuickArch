@@ -68,3 +68,16 @@ echo "4 : Metacity        9 : WMW        14 : PekWm       19 : ukwm      24 : Xf
 echo "5 : Herbstluftwm   10 : Notion     15 : Ratpoison   20 : sway      25 : none"
 
 read WM
+
+echo "--         Terminal Emulator Install           --"
+echo "                                                 "
+
+#ask for the Terminal Emulator which the user will want to install
+echo "Please Enter the number which coresponds with the window manager you wish to install:"
+echo "1 : Alacritty       3 : Konsole              5 : kitty             7 : Liri Terminal   9 : moserial"
+echo "2 : PuTTY           4 : Qterminal            6 : Terminology       8 : urxvt          10 : xterm"
+echo "3 : Yakuake         6 : Deepin Terminal      9 : GNOME Terminal   12 : Guake          15 : LXTerminal"
+echo "4 : MATE terminal   8 : Pantheon Terminal   12 : sakura           16 : Terminator     20 : Termite"
+echo "5 : Tilda          10 : Tilix               15 : Xfce Termianl    20 : KMSCON         25 : None"
+
+read WM
