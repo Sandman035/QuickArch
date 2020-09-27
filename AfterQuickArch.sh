@@ -35,6 +35,7 @@ pacman -Sy
 
 echo "--              Create a user                 --"
 
+#make users in the wheel group be able to run sudo commands
 echo "%wheel ALL=(ALL) ALL" >> /etc/sudoers
 
 #set up a user
