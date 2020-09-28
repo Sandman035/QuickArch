@@ -39,6 +39,8 @@ display_driver=(mesa  '')
 desktop_environments=(gnome plasma budgie-desktop cinnamon deepin enlightenment lxde lxqt mate gnome-flashback ukui xfce4 '')
 #array of the package names for the available window managers
 window_managers=(awesome i3-wm i3-gaps metacity herbstluftwm openbox bspwm spectrwm openmotif notion qtile xmonad blackbox pekwm ratpoison fluxbox fvwm icewm ukwm sway jwm lwm marco xfwm4 '')
+#array of the package names for the available display managers
+display_managers=(gdm lightdm lxdm sddm xorg-xdm '')
 
 pacman -Sy
 
@@ -95,6 +97,15 @@ echo "4 : Metacity        9 : MWM        14 : PekWm       19 : ukwm      24 : Xf
 echo "5 : Herbstluftwm   10 : Notion     15 : Ratpoison   20 : sway      25 : none"
 
 read WM
+
+echo "--          Display Manager Install            --"
+echo "                                                 "
+
+#ask for the Display Manager which the user will want to install
+echo "Please Enter the number which coresponds with the display manager you wish to install:"
+echo "1 : GDM   2 : LightDM   3 : LXDM   4 : SDDM   5 : XDM    6 : none"
+
+read DM
 
 echo "--         Terminal Emulator Install           --"
 echo "                                                 "
