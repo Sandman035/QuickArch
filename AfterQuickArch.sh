@@ -134,5 +134,7 @@ TERMINAL=$(($TERMINAL - 1))
 TEXT=$(($TEXT - 1))
 
 #the actuall instalation of the packages chosen above (I could have done this in one line but I chose not to)
+pacman -S ${display_server[${DS}]}
+pamcan -S ${display_driver[${DD}]} --noconfirm --needed
 pacman -S ${desktop_environments[${DE}]} --noconfirm --needed
 pacman -S ${window_managers[${WM}]} --noconfirm --needed
