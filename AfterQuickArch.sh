@@ -31,6 +31,10 @@ echo "-------------------------------------------------"
 echo "                                                 "
 echo "                                                 "
 
+#array of the package names for the available display servers
+display_server=(xorg '')
+#array of the package names for the available display drivers
+display_driver=(mesa  '')
 #array of the package names for the available desktop environments
 desktop_environments=(gnome plasma budgie-desktop cinnamon deepin enlightenment lxde lxqt mate gnome-flashback ukui xfce4 '')
 #array of the package names for the available window managers
@@ -55,7 +59,7 @@ echo "                                                 "
 
 #ask for the Display Server which the user will want to install
 echo "Please Enter the number which coresponds with the display server you wish to install:"
-echo "1 : Xorg    2 : Waylang    3 : None"
+echo "1 : Xorg    2 : none"
 
 read DS
 
@@ -64,7 +68,7 @@ echo "                                                 "
 
 #ask for the Display Driver which the user will want to install
 echo "Please Enter the number which coresponds with the display driver you wish to install:"
-echo "1 : AMD    2 : Intel    3 : NVIDIA    4 : None"
+echo "1 : Intel    4 : none"
 
 read DD
 
