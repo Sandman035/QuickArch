@@ -50,6 +50,24 @@ read USERNAME
 useradd -G wheel -m ${USERNAME}
 passwd ${USERNAME}
 
+echo "--           Display Server Install            --"
+echo "                                                 "
+
+#ask for the Display Server which the user will want to install
+echo "Please Enter the number which coresponds with the display server you wish to install:"
+echo "1 : Xorg    2 : Waylang    3 : None"
+
+read DS
+
+echo "--           Display Driver Install            --"
+echo "                                                 "
+
+#ask for the Display Driver which the user will want to install
+echo "Please Enter the number which coresponds with the display driver you wish to install:"
+echo "1 : AMD    2 : Intel    3 : NVIDIA    4 : None"
+
+read DD
+
 echo "--        Descktop Environment Install         --"
 echo "                                                 "
 
@@ -104,11 +122,13 @@ echo "8 : vi       16 : vim                    24 : Vis               32 : Neovi
 read TEXT
 
 #substracts one from each input giving by user because arrays start at 0 and not 1
+DS=$(($DS - 1))
+DD=$(($DD - 1))
 DE=$(($DE - 1))
 WM=$(($WM - 1))
 TERMINAL=$(($TERMINAL - 1))
 TEXT=$(($TEXT - 1))
 
 #the actuall instalation of the packages chosen above (I could have done this in one line but I chose not to)
-pacman -S ${desktop_environments[${DE}]}
-pacman -S ${window_managers[${WM}]}
+pacman -S ${desktop_environments[${DE}]} --noconfirm --needed
+pacman -S ${window_managers[${WM}]} --noconfirm --needed
