@@ -103,9 +103,12 @@ echo "8 : vi       16 : vim                    24 : Vis               32 : Neovi
 
 read TEXT
 
+#substracts one from each input giving by user because arrays start at 0 and not 1
 DE=$(($DE - 1))
 WM=$(($WM - 1))
 TERMINAL=$(($TERMINAL - 1))
 TEXT=$(($TEXT - 1))
 
+#the actuall instalation of the packages chosen above (I could have done this in one line but I chose not to)
 pacman -S ${desktop_environments[${DE}]}
+pacman -S ${window_managers[${WM}]}
