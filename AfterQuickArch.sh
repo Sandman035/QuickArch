@@ -34,7 +34,7 @@ echo "                                                 "
 #array of the package names for the available desktop environments
 desktop_environments=(gnome plasma budgie-desktop cinnamon deepin enlightenment lxde lxqt mate gnome-flashback ukui xfce4 '')
 #array of the package names for the available window managers
-window_managers=()
+window_managers=(awesome i3-wm i3-gaps metacity herbstluftwm openbox bspwm spectrwm openmotif notion qtile xmonad blackbox pekwm ratpoison fluxbox fvwm icewm ukwm sway jwm lwm marco xfwm4 '')
 
 pacman -Sy
 
@@ -67,9 +67,9 @@ echo "                                                 "
 #ask for the Window Manager which the user will want to install
 echo "Please Enter the number which coresponds with the window manager you wish to install:"
 echo "1 : Awesome         6 : Openbox    11 : Qtile       16 : Fluxbox   21 : JWM"
-echo "2 : i3              7 : Bswm       12 : xmonad      17 : FVWM      22 : lwm"
+echo "2 : i3              7 : Bspwm      12 : xmonad      17 : FVWM      22 : lwm"
 echo "3 : i3-gaps         8 : spectrwm   13 : Blackbox    18 : IceWM     23 : Marco"
-echo "4 : Metacity        9 : WMW        14 : PekWm       19 : ukwm      24 : Xfwm"
+echo "4 : Metacity        9 : MWM        14 : PekWm       19 : ukwm      24 : Xfwm"
 echo "5 : Herbstluftwm   10 : Notion     15 : Ratpoison   20 : sway      25 : none"
 
 read WM
