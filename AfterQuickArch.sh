@@ -31,6 +31,9 @@ echo "-------------------------------------------------"
 echo "                                                 "
 echo "                                                 "
 
+desktop_environments=(gnome plasma budgie-desktop cinnamon deepin enlightenment lxde lxqt mate gnome-flashback ukui xfce4 '')
+window_managers=()
+
 pacman -Sy
 
 echo "--              Create a user                 --"
@@ -50,7 +53,7 @@ echo "                                                 "
 
 #ask for the Desktop Environment which the user will want to install
 echo "Please Enter the number which coresponds with the desktop environment you wish to install:"
-echo "1 : Gnome     4 : Cinnamon       7 : LXDE     10 : Sugar   13 : None"
+echo "1 : Gnome     4 : Cinnamon       7 : LXDE     10 : GNOME Flashback   13 : None"
 echo "2 : KDE       5 : Deepin         8 : LXQt     11 : UKUI"
 echo "3 : Budgie    6 : Enlightenment  9 : MATE     12 : Xfce"
 
