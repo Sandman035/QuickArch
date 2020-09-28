@@ -31,7 +31,9 @@ echo "-------------------------------------------------"
 echo "                                                 "
 echo "                                                 "
 
+#array of the package names for the available desktop environments
 desktop_environments=(gnome plasma budgie-desktop cinnamon deepin enlightenment lxde lxqt mate gnome-flashback ukui xfce4 '')
+#array of the package names for the available window managers
 window_managers=()
 
 pacman -Sy
