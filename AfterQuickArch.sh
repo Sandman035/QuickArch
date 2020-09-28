@@ -100,3 +100,10 @@ echo "7 : mg       15 : Zile                   23 : Kakoune           31 : Neovi
 echo "8 : vi       16 : vim                    24 : Vis               32 : Neovim-Qt"
 
 read TEXT
+
+DE=$(($DE - 1))
+WM=$(($WM - 1))
+TERMINAL=$(($TERMINAL - 1))
+TEXT=$(($TEXT - 1))
+
+pacman -S ${desktop_environments[${DE}]}
