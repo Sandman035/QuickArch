@@ -41,6 +41,8 @@ desktop_environments=(gnome plasma budgie-desktop cinnamon deepin enlightenment 
 window_managers=(awesome i3-wm i3-gaps metacity herbstluftwm openbox bspwm spectrwm openmotif notion qtile xmonad blackbox pekwm ratpoison fluxbox fvwm icewm ukwm sway jwm lwm marco xfwm4 '')
 #array of the package names for the available display managers
 display_managers=(gdm lightdm lxdm sddm xorg-xdm '')
+#array of the package names for the available lightdm greeters
+lightdm_greeters=(lightdm-gtk-greeter deepin-session-ui lightdm-pantheon-greeter lightdm-webkit2-greeter lightdm-webkit-theme-litarvan)
 
 pacman -Sy
 
@@ -141,6 +143,7 @@ DS=$(($DS - 1))
 DD=$(($DD - 1))
 DE=$(($DE - 1))
 WM=$(($WM - 1))
+DM=$(($DM - 1))
 TERMINAL=$(($TERMINAL - 1))
 TEXT=$(($TEXT - 1))
 
@@ -149,3 +152,22 @@ pacman -S ${display_server[${DS}]}
 pamcan -S ${display_driver[${DD}]} --noconfirm --needed
 pacman -S ${desktop_environments[${DE}]} --noconfirm --needed
 pacman -S ${window_managers[${WM}]} --noconfirm --needed
+pacman -S ${dispaly_managers[${DM}]}--noconfirm --needed
+#enables the display manager
+systemctl enable ${dispaly_managers[${DM}]}.service
+#install a greeter if installed lightdm
+if [DM -eq 1]
+then
+  echo "Please enter the number which coresponds with the lightdm greeter you wish to install:"
+  echo "1 : lightdm-gtk-greeter        3 : lightdm-deepin-greeter           5 : lightdm-pantheon-greeter"
+  echo "2 : lightdm-webkit2-greeter    4 : lightdm-webkit-theme-litarvan    6 : none"
+
+  read GREETER
+
+  GREETER=$(($GREETER - 1))
+  
+  pacman -S ${lightdm_greeters[${GREETER}]}
+  
+  echo "After this script you will need to set the default greeter in the /etc/lightdm/lightdm.conf file under the [Seat:*] section"
+fi
+  
