@@ -43,6 +43,8 @@ window_managers=(awesome i3-wm i3-gaps metacity herbstluftwm openbox bspwm spect
 display_managers=(gdm lightdm lxdm sddm xorg-xdm '')
 #array of the package names for the available lightdm greeters
 lightdm_greeters=(lightdm-gtk-greeter deepin-session-ui lightdm-pantheon-greeter lightdm-webkit2-greeter lightdm-webkit-theme-litarvan)
+#array of the package names for the available terminal emulators
+terminal_emulators=(alcritty putty yakuake mate-terminal tilda konsole qterminal deepin-terminal pantheon-terminal tilix kitty terminology gnome-terminal sakura xfce4-terminal liri-terminal rxvt-unicode guake terminator kmscon moserial xterm lxterminal termite '')
 
 pacman -Sy
 
@@ -152,7 +154,7 @@ pacman -S ${display_server[${DS}]}
 pamcan -S ${display_driver[${DD}]} --noconfirm --needed
 pacman -S ${desktop_environments[${DE}]} --noconfirm --needed
 pacman -S ${window_managers[${WM}]} --noconfirm --needed
-pacman -S ${dispaly_managers[${DM}]}--noconfirm --needed
+pacman -S ${dispaly_managers[${DM}]} --noconfirm --needed
 #enables the display manager
 systemctl enable ${dispaly_managers[${DM}]}.service
 #install a greeter if installed lightdm
@@ -170,4 +172,5 @@ then
   
   echo "After this script you will need to set the default greeter in the /etc/lightdm/lightdm.conf file under the [Seat:*] section"
 fi
-  
+#continue with the rest of the install
+pacman -S ${terminal_emulators[${TERMINAL}]} --noconfirm --needed
