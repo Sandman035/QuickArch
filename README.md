@@ -8,6 +8,8 @@ PLEASE TRY THIS CODE BEFORE USING IT ON YOUR MAIN COMPUTER!!!
 
 There might be some bugs or other problems. Please fell free to let me about these problems and fell free to personalise this code as you please.
 
+---
+
 ## Instructions:
 
 1. Read over the arch wiki installation manual first.
