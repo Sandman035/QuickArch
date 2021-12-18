@@ -1,4 +1,5 @@
 # QuickArch
+## THIS PROJECT HAS NOT BEEN TESTED WITH THE NEW ARCH RELEASE, AND IS NO LONGER IN DEVELOPMENT.
 
 This project is a fast arch installer with partitioning included. This project used the arch wiki for the instalation process. This code lets you partition your disk as you wish and after asks you which partitions you have, and it will format and mount them for you. This code will install Arch and also configure it.
 
